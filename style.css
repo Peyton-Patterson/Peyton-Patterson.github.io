@@ -17,7 +17,7 @@ header h1 {
     font-size: 2rem;
 }
 
-nav ul, .projects-nav ul {
+nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -26,92 +26,62 @@ nav ul, .projects-nav ul {
     margin: 0;
 }
 
-nav ul li, .projects-nav ul li {
+nav ul li {
     margin: 0 15px;
+    position: relative;
 }
 
-nav ul li a.button, .projects-nav ul li a.button {
+nav ul li a.button {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #353d46;
     border-radius: 5px;
     display: inline-block;
 }
 
-nav ul li a.button:hover, .projects-nav ul li a.button:hover {
-    background-color: #0056b3;
+nav ul li a.button:hover {
+    background-color: #fe5c00;
 }
 
-nav ul li a.active, .projects-nav ul li a.active {
-    background-color: #FF8C00; /* Orange color for the selected button */
+nav ul li a.active {
+    background-color: #fe5c00; /* Orange color for the selected button */
 }
 
-.projects-nav {
-    display: none; /* Hide by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
 }
 
-.projects-nav ul {
-    margin-top: 10px;
+.dropdown-content li {
+    margin: 0;
 }
 
-.projects-nav .button {
-    margin: 5px 10px;
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #444;
+    border-radius: 0;
 }
 
-#projects .projects-nav {
-    display: flex; /* Show project buttons only on project pages */
+.dropdown-content a:hover {
+    background-color: #555;
 }
 
-#about {
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#about, #projects, #speedfest, #fsae {
     padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.about-image {
-    flex: 1 1 300px;
-    padding: 10px;
-}
-
-.about-image img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.about-text {
-    flex: 2 1 400px;
-    padding: 10px;
-    text-align: left;
-}
-
-.about-text h2 {
-    margin-top: 0;
-    color: #333;
-}
-
-.about-text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #555;
-}
-
-.contact-box {
-    flex: 1 1 300px;
-    padding: 10px;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    margin-left: 20px;
-}
-
-.contact-box h3 {
-    margin-top: 0;
-    color: #333;
 }
 
 footer {
@@ -122,28 +92,3 @@ footer {
     margin-top: 2rem;
 }
 
-@media (max-width: 768px) {
-    nav ul, .projects-nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li, .projects-nav ul li {
-        margin: 10px 0;
-    }
-
-    #about {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-image,
-    .about-text,
-    .contact-box {
-        flex: 1 1 100%;
-        margin-left: 0;
-    }
-
-    .contact-box {
-        margin-top: 20px;
-    }
-}
