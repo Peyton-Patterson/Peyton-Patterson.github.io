@@ -1,35 +1,20 @@
 body {
     margin: 0;
-    font-family: georgia, sans-serif;
+    font-family: 'Lato', sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
 
 header {
+    text-align: center;
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo {
-    width: 40px;
-    margin-right: 10px;
+    padding: 20px 0;
 }
 
 header h1 {
     margin: 0;
-    font-size: 1.5rem;
-}
-
-header h1 a {
-    color: #fff;
-    text-decoration: none;
+    font-size: 2rem;
 }
 
 nav ul {
@@ -54,17 +39,11 @@ nav ul li a {
 #about {
     padding: 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-.about-container {
-    display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    align-items: flex-start;
 }
 
 .about-image {
@@ -127,10 +106,6 @@ footer {
     #about {
         flex-direction: column;
         text-align: center;
-    }
-
-    .about-container {
-        flex-direction: column;
     }
 
     .about-image,
