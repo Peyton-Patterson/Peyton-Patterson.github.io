@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background: linear-gradient(to right, #d0d0d0, #b0b0b0);
+    color: #201f1f;
 }
 
 header {
@@ -91,12 +91,221 @@ footer {
     margin-top: 2rem;
 }
 
+/* Desktop-specific styling */
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 200px; /* Set max width for the image box */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border: 3px solid black;
+    box-sizing: border-box;
+}
+
+.about-content {
+    flex: 2;
+}
+
+.about-text {
+    text-align: center;
+}
+
+/* Flex container for contact and certifications */
+.info-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Space between the boxes */
+    justify-content: center;
+}
+
+.contact-box, .certifications-box {
+    background-color: rgba(254, 93, 0, 0.05); /* Orange with transparency */
+    padding: 3px;
+    border-radius: 10px;
+    width: 500px; /* Adjust size as needed */
+    color: black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional box shadow */
+    border: 3px solid black;
+    text-align: center;
+    line-height: .5;
+}
+
+.certifications-box h3, .contact-box h3 {
+    text-align: center;
+}
+
+.certifications-box p {
+    text-align: center;
+}
+
+/* Mobile-specific styling */
 @media (max-width: 768px) {
-    nav ul {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image {
+        margin-right: 0;
+        margin-bottom: 20px; /* Space between image and text on mobile */
+        max-width: 100%; /* Ensure the image fits within mobile view */
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .cert-contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cert-box, .contact-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Project Buttons Page */
+.projects-overview {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.projects-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.project-button {
+    position: relative;
+    width: 200px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
+    overflow: hidden;
+    border-radius: 8px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-image: url('path-to-your-image.jpg'); /* Set the background image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(0px); /* Apply blur effect to background */
+    transition: filter 0.3s ease;
+}
+
+.project-button span {
+    position: relative;
+    z-index: 1; /* Ensure text is above the background */
+    color: white; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
+}
+
+.project-button:hover {
+    filter: grayscale(100); /* Less blur on hover for better visibility */
+}
+
+/* Mobile-specific styling */
+@media (max-width: 768px) {
+    .project-button {
+        width: 100%; /* Full width on mobile */
+        height: 120px; /* Adjust height for mobile */
+    }
+}
+
+
+/* General styling for projects */
+.centered-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.box-row {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 1.5rem 0; /* Margin for spacing */
+    padding: 10px; /* Space around content */
+    box-sizing: border-box;
+    height: 220px; /* Set height for the boxes */
+}
+
+.box-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.box-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    height: 220px; /* Set height for the image to match the text box */
+    border: none; /* No border */
+}
+
+.box-text {
+    flex: 1;
+    background-color: #fe5c00; /* Orange color */
+    background-image: linear-gradient(13deg, #fe5c00 0%, #ffaa0b 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 220px; /* Ensure the text area matches the image height */
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0px;
+}
+
+.description {
+    padding: 2rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .box-row {
+        flex-direction: column;
+        height: auto; /* Auto height for mobile layout */
+    }
+
+    .box-row.reverse {
         flex-direction: column;
     }
 
-    nav ul li {
-        margin: 10px 0;
+    .box-text {
+        width: 100%;
+        height: auto; /* Auto height for mobile layout */
+    }
+
+    .box-image {
+        width: 100%;
+        height: 200px; /* Define image height for mobile */
     }
 }
