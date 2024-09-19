@@ -432,3 +432,10 @@ p {
         padding: 20px; /* Adjust padding for mobile */
     }
 }
+
+@media (max-width: 800px) {
+    .box-image {
+        display: none; /* Hide the box-image elements */
+    }
+}
+
