@@ -435,9 +435,9 @@ p {
 
 @media (max-width: 800px) {
     .box-row.reverse .box-image {
-        display: none; /* Hide the box-image elements */
+        display: none !important; /* Hide the box-image elements */
     }
     .box-row .box-image {
-        display: none; /* Hide the box-image elements */
+        display: none !important; /* Hide the box-image elements */
     }
 }
