@@ -150,38 +150,6 @@ footer {
     text-align: center;
 }
 
-/* Mobile-specific styling */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-image {
-        margin-right: 0;
-        margin-bottom: 20px; /* Space between image and text on mobile */
-        max-width: 100%; /* Ensure the image fits within mobile view */
-    }
-
-    .about-content {
-        text-align: center;
-    }
-
-    .cert-contact-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cert-box, .contact-box {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    
-    .info-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
 
 /* Project Buttons Page */
 .projects-overview {
@@ -379,3 +347,48 @@ p {
     text-align: center;
 }
 
+/* General Mobile Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+    
+    .main-content {
+        padding: 10px;
+    }
+    
+    /* Adjust the image box and text box layout for mobile */
+    .image-text-container {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+    }
+
+    .about-image {
+        width: 100%;
+        height: auto;
+        border: 3px solid black;
+        margin-bottom: 20px;
+    }
+
+    .contact-box, .certifications-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Ensures the 'moreprojects.html' is a normal scrolling page on mobile */
+@media (max-width: 768px) {
+    .project-buttons-container {
+        display: block;
+        margin: 0;
+    }
+    
+    .project-button {
+        width: 100%;
+        margin-bottom: 20px;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        line-height: 150px;
+    }
+}
