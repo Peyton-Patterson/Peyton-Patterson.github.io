@@ -103,8 +103,8 @@ footer {
 
 .about-image {
     flex: 1;
-    max-width: 200px; /* Set max width for the image box */
-    margin-right: 20px; /* Space between image and text */
+    max-width: 200px; 
+    margin-right: 20px; 
 }
 
 .about-image img {
@@ -134,9 +134,9 @@ footer {
     background-color: rgba(254, 93, 0, 0.05); /* Orange with transparency */
     padding: 3px;
     border-radius: 10px;
-    width: 500px; /* Adjust size as needed */
+    width: 500px;
     color: black;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional box shadow */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border: 3px solid black;
     text-align: center;
     line-height: .5;
@@ -209,7 +209,6 @@ footer {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
-    background-image: url('path-to-your-image.jpg'); /* Set the background image */
     background-size: cover;
     background-position: center;
     filter: blur(0px); /* Apply blur effect to background */
@@ -218,13 +217,13 @@ footer {
 
 .project-button span {
     position: relative;
-    z-index: 1; /* Ensure text is above the background */
+    z-index: 1; 
     color: white; /* Text color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .project-button:hover {
-    filter: grayscale(100); /* Less blur on hover for better visibility */
+    filter: grayscale(100); /* grayscale cover */
 }
 
 /* Mobile-specific styling */
@@ -233,6 +232,19 @@ footer {
         width: 100%; /* Full width on mobile */
         height: 120px; /* Adjust height for mobile */
     }
+}
+
+/* Speedfest */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+video {
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -248,8 +260,8 @@ footer {
 .subtitle {
     text-align: center;
     font-size: 1rem;
-    color: #201f1f; /* Subtle color for the subtitle */
-    margin: 0.2rem 0; /* Space above and below the subtitle */
+    color: #201f1f; 
+    margin: 0.2rem 0; 
     margin-bottom: 0;
 }
 
@@ -264,10 +276,10 @@ footer {
     display: flex;
     align-items: stretch;
     width: 80%;
-    margin: 1rem 0; /* Margin for spacing */
-    padding: 0px; /* Space around content */
+    margin: 1rem 0;
+    padding: 0px;
     box-sizing: border-box;
-    height: 220px; /* Set height for the boxes */
+    height: 220px; 
 }
 
 .box-row.reverse {
@@ -276,32 +288,32 @@ footer {
 
 .box-row .box-image {
     flex: 1;
-    background-size: contain; /* Ensure the largest dimension fits */
+    background-size: contain; 
     background-position: right;
     background-repeat: no-repeat;
-    height: 220px; /* Maintain consistent height */
-    width: 100%; /* Ensure full width */
+    height: 220px; 
+    width: 100%;
 }
 
 .box-row.reverse .box-image {
     flex: 1;
-    background-size: contain; /* Ensure the largest dimension fits */
+    background-size: contain;
     background-position: left;
     background-repeat: no-repeat;
-    height: 220px; /* Maintain consistent height */
-    width: 100%; /* Ensure full width */
+    height: 220px; 
+    width: 100%;
 }
 
 .box-text {
     flex: 1;
-    background-color: #fe5c00; /* Orange color */
+    background-color: #fe5c00;
     background-image: linear-gradient(13deg, #fe5c00 0%, #ffaa0b 100%);
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 220px; /* Ensure the text area matches the image height */
+    height: 220px;
     font-size: 1.5rem;
     font-weight: bold;
     padding: 0px;
@@ -332,3 +344,38 @@ footer {
         height: 200px; /* Set image height for mobile */
     }
 }
+
+/* Scroll page */
+.scroll-container {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.project-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start; 
+    background-image: linear-gradient(0deg, #ffaa0bc3 0%, #fe5d00c5 50%, #ffaa0bc3 100%); 
+    padding: 40px;
+    border-radius: 8px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 80%;
+    max-width: 800px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+

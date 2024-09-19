@@ -18,8 +18,10 @@
                         <li><a href="speedfest.html" class="active">Speedfest</a></li>
                         <li><a href="fsae.html">Formula SAE</a></li>
                         <li><a href="rocketry.html">Rocketry</a></li>
+                        <li><a href="moreprojects.html">More Projects</a></li>
                     </ul>
                 </li>
+                <li><a href="resume.html" class="button">Resume</a></li>
             </ul>
         </nav>
     </header>
@@ -31,28 +33,28 @@
         <div class="box-container">
             <!-- Box 1 -->
             <div class="box-row">
-                <div class="box-image" style="background-image: url('speedfest_dr.jpg');"alt="Design & Research"></div>
+                <div class="box-image" style="background-image: url('media/speedfest_dr.jpg');"alt="Design & Research"></div>
                 <div class="box-text">
                     <p>Design & Research</p>
                 </div>
             </div>
             <!-- Box 2 -->
             <div class="box-row reverse">
-                <div class="box-image" style="background-image: url('speedfest_sim.jpg');"alt="Simulation"></div>
+                <div class="box-image" style="background-image: url('media/speedfest_sim.jpg');"alt="Simulation"></div>
                 <div class="box-text">
                     <p>Simulation</p>
                 </div>
             </div>
             <!-- Box 3 -->
             <div class="box-row">
-                <div class="box-image" style="background-image: url('speedfest_fab.jpg');"alt="Fabrication"></div>
+                <div class="box-image" style="background-image: url('media/speedfest_fab.jpg');"alt="Fabrication"></div>
                 <div class="box-text">
                     <p>Fabrication</p>
                 </div>
             </div>
             <!-- Box 4 -->
             <div class="box-row reverse">
-                <div class="box-image" style="background-image: url('speedfest_tv.jpg');"alt="Testing & Validation"></div>
+                <div class="box-image" style="background-image: url('media/speedfest_tv.jpg');"alt="Testing & Validation"></div>
                 <div class="box-text">
                     <p>Testing & Validation</p>
                 </div>
@@ -62,13 +64,32 @@
         <section class="description">
             <h3>About the Speedfest Project</h3>
             <p>
-                This project is focused on building a high-performance vehicle with key stages in design, simulation, fabrication, and testing. Each of these stages is crucial for ensuring the success of the overall project.
+                This project was focused on building a high-performance, stealth aircraft as requested by the DoD. The key stages of the project being in design, simulation, fabrication, and testing. Each of these stages was crucial for ensuring the success of the overall project. The goals of the aircraft were to be easily transportable, be fast while also having a high endurance, and be stealthy. Project-wise, the aircraft needed to be cheap as well to be marketable to the contract. My technical roles in this project were with the Aerodynamics team and manufacturing.
+
+                <br><br>After analysis of the vehicle requirements, pieces of the mission were conflicting. The team had to prioritize certain design goals and optimizations. Stealth was the first impactful design restriction. After I researched about minimizing the Radar Cross Section of an aircraft and ran simulations in MATLAB, the team was able to decide on the general body form of the aircraft.
+
+                <br><br>To speed up the process of coming to a protype design, I made both Python and Mathcad code to provide theorectical performance metrics given certain design components. These metrics included estimated weights, endurance, range (using performace data of Xicoy turboengines), and estimated stop speeds. This allowed iteration of wing sizing and wing sweep after importing airfoil data from XFoil to iterate with different airfoil shapes as well.
+
+                <br><br>The general shaping of the aircraft was finally known after using the wing shape to figure out how big and where to put the tail. The team shared modeling the aircraft in SOLIDWORKS which validated center of gravity estimations. After the aircraft model was completed, I shared the load in performing computational fluid dynamics (CFD) simulations to validate the estimated performance metrics. Since the performance numbers were corroborated through the simulations and estimations, the model was used to create molds.
+
+                <br><br>Overall, the team created 4 planes. They were created using a carbon fiber layups in our molds. The process was laying up wet fiber glass, or often prepreg, on our core wood material and carbon fiber. <em>This project wasn't the first time I have performed this method of manufacturing products as I did a similar method working on a FSAE car</em>. The wing was split into two half-molds, the fuselage and horizontal tail had two half-molds, and the vertical tail had its own two half-molds. During that process, I helped to ease the manufacturing process by providing input and jig setups to improve build quality while minimizing mistakes, time, and costs. 
+
+                <br><br>Each plane was flight tested before producing a new one. Part of our avionics package included a flight data recorder, which I analyzed with the Aerodynamics team. The information supported our estimated performance metrics while giving us data to optimize by making small changes to the build and piloting.
+
+                <br><br>To conclude the project, the DoD bought our aircraft. We created the stealthiest, lightest, cheapest, and most long-lasting plane! To give credit to the competition, 230 MPH was not the fastest, but our design prioritized top speed the least.
             </p>
         </section>
     </main>
 
+    <div class="video-container">
+        <video width="640" height="360" controls muted>
+            <source src="media/speedfest.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
     <footer>
-        <p>&copy; 2024 Peyton Patterson</p>
+        <p>&copy;Peyton Patterson</p>
     </footer>
 
     <script src="script.js"></script>
