@@ -127,7 +127,7 @@ footer {
 /* Flex container for contact and certifications */
 .info-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px; /* Space between the boxes */
     justify-content: center;
     flex-wrap: wrap;
