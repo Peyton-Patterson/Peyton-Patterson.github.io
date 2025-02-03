@@ -80,7 +80,7 @@ function activateField(cell)
 			if (div.ms)
 			{
 				var ms=div.ms;
-				if (ms.isMine && !ms.marked) div.innerHTML='<img class="stretch" src="mdeia/msmine.png">';
+				if (ms.isMine && !ms.marked) div.innerHTML='<img class="stretch" src="media/msmine.png">';
 			}
 		}
 		gameOver=true;
